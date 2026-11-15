@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나만의 중국 여행 | 영남대학교</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+   body {
+  margin: 0;
+  background: #163b70;
+  color: white;
+  font-family: "맑은 고딕", sans-serif;
+  animation: backgroundChange 10s ease-in-out infinite;
+}
+
+@keyframes backgroundChange {
+  0%, 100% {
+    background-color: #163b70;
+  }
+
+  33% {
+    background-color: #791f35;
+  }
+
+  66% {
+    background-color: #145943;
+  }
+}
+
+   .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  animation: pageEnter 0.9s ease-out both;
+}
+
+/* 아래에서 올라오며 선명해지는 등장 효과 */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 기기의 움직임 줄이기 설정 반영 */
+@media (prefers-reduced-motion: reduce) {
+  .container {
+    animation: none;
+  }
+}
+
+    .university {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .semester {
+      margin-top: 60px;
+      color: #b9d8ff;
+      font-size: 20px;
+    }
+
+    h1 {
+      margin: 16px 0;
+      font-size: clamp(38px, 7vw, 72px);
+      letter-spacing: -2px;
+    }
+
+    .intro {
+      color: #d6e6ff;
+      line-height: 1.8;
+ font-size: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .card {
+      padding: 32px;
+      background: white;
+      color: #18324a;
+      border-radius: 16px;
+    }
+
+    .card h2 {
+      margin: 0 0 16px;
+      font-size: 26px;
+    }
+
+    .card p {
+      margin: 0;
+      color: #526579;
+      line-height: 1.8;
+    }
+
+    footer {
+      margin-top: 48px;
+      color: #b9d8ff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+    h1, .intro {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- 학교 이름과 홈페이지 제목 -->
+    <header>
+      <div class="university"
+     style="display: flex; align-items: center; gap: 14px;">
+  <img src="assets/images/yu-pruma.png"
+       alt="영남대학교 캐릭터 푸르마"
+       style="width: 72px; height: auto;">
+  <span>영남대학교 중국언어문화학과</span>
+</div>
+      <p class="semester">2027학년 1학기 여행중국어</p>
+      <h1>"나만의 중국 여행 가이드 웹앱"</h1>
+    <p class="intro" style="font-weight: bold;">
+  多彩 구이저우 여행<br>
+  관광지부터 먹거리, 교통, 숙박까지 내 손 안에
+</p>
+    </header>
+
+    <!-- 상세페이지로 연결할 네 가지 메뉴 -->
+    <main class="cards">
+
+    <a class="card" href="guizhou.html"
+   style="
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     height: 320px;
+     color: white;
+     text-decoration: none;
+     background:
+       linear-gradient(to top, rgba(0,0,0,0.75), transparent 70%),
+       url('assets/images/huangguoshu-1.webp') center / cover no-repeat;
+   ">
+
+  <h2>관광지 편</h2>
+  <p style="color: white;">
+    황과수폭포 · 서강천호묘채 · 범정산
+  </p>
+
+</a>
+
+      <article class="card"
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 320px;
+    color: white;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.75), transparent 70%),
+      url('assets/images/food.jpg') center / cover no-repeat;
+  ">
+
+  <h2>먹거리 편</h2>
+  <p style="color: white;">준비 중</p>
+
+</article>
+
+     <article class="card"
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 320px;
+    color: white;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.75), transparent 70%),
+      url('assets/images/transport.jpg') center / cover no-repeat;
+  ">
+
+  <h2>교통 편</h2>
+  <p style="color: white;">준비 중</p>
+
+</article>
+
+<article class="card"
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 320px;
+    color: white;
+    background:
+      linear-gradient(to top, rgba(0,0,0,0.75), transparent 70%),
+      url('assets/images/hotel.jpg') center / cover no-repeat;
+  ">
+
+  <h2>숙박 편</h2>
+  <p style="color: white;">준비 중</p>
+
+</article>
+
+    </main>
+
+    <footer>
+      AI·융합마이크로전공 교과목 - 프로토타입 제작
+    </footer>
+
+  </div>
+</body>
+</html>
